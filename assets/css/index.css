@@ -1,0 +1,172 @@
+#container {
+    height: 100vh;
+    width: 100vw;
+    /*visibility: hidden;*/
+}
+#content {
+}
+#pageLoading {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    display: none;
+}
+#weatherContainer {
+    position: absolute;
+    top: 2%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 75%;
+    min-width: 375px;
+    min-height: 650px;
+    background: rgba(60, 60, 60, 0.3);
+    color: white;
+}
+.weatherInner {
+    color: white;
+    text-align: center;
+}
+.weatherInner div.first {
+    display: inline-block;
+    margin: 0 0 0 30px;
+}
+.weatherInner div.second {
+    position: absolute;
+    top: 40px;
+    margin-left: -5px;
+    display: inline;
+}
+.weatherInner div.third {
+    display: inline-block;
+    margin: 0 0 0 5px;
+}
+.weatherInner div.fourth {
+    display: inline-block;
+    margin: 0 0 0 40px;
+    text-align: left;
+}
+.weatherInner div.xs {
+    font-size: 1.3em;
+}
+.weatherInner div.sm {
+    font-size: 2.5em;
+}
+.weatherInner div.md {
+    font-size: 3.25em;
+}
+.weatherInner div.lg {
+    font-size: 4.5em;
+}
+.weatherInner div.xl {
+    font-size: 5.5em;
+}
+.weatherInner div.xxl {
+    font-size: 7.25em;
+}
+.nextforecast {
+    display: inline-block;
+    width: 20%;
+}
+#fairWeatherBackgroundImage {
+    display: none;
+}
+#sunnyWeatherBackgroundImage {
+    display: none;
+}
+#cloudyWeatherBackgroundImage {
+    display: none;
+}
+#rainyWeatherBackgroundImage {
+    display: none;
+}
+.WeatherBackgroundImage {
+    width: 100%;
+    height: 100%;
+}
+.WeatherBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+.WeatherBackground:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(50, 50, 50, 0.5);
+    -moz-transition: background .3s linear;
+    -webkit-transition: background .3s linear;
+    -o-transition: background .3s linear;
+    transition: background .3s linear;
+}
+@media(min-width: 0px){
+    .weatherInner div.xs {
+        font-size: 1.1em;
+    }
+    .weatherInner div.first {
+        font-size: 7em;
+    }
+    .weatherInner div.second {
+        font-size: 2.5em;
+    }
+    .weatherInner div.third {
+        font-size: 1.5em;
+    }
+}
+@media(min-width: 550px){
+    .weatherInner div.xs {
+        font-size: 1.2em;
+    }
+    .weatherInner div.first {
+        font-size: 9em;
+    }
+    .weatherInner div.second {
+        font-size: 3em;
+    }
+    .weatherInner div.third {
+        font-size: 2.25em;
+    }
+}
+@media(min-width: 768px){
+    .weatherInner div.xs {
+        font-size: 1.25em;
+    }
+    .weatherInner div.first {
+        font-size: 12em;
+    }
+    .weatherInner div.second {
+        font-size: 5em;
+    }
+    .weatherInner div.third {
+        font-size: 4.25em;
+    }
+}
+@media(min-width: 1000px){
+    .weatherInner div.xs {
+        font-size: 1.3em;
+    }
+    .weatherInner div.first {
+        font-size: 15em;
+    }
+    .weatherInner div.second {
+        font-size: 7em;
+    }
+    .weatherInner div.third {
+        font-size: 6.75em;
+    }
+}
