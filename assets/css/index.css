@@ -1,9 +1,14 @@
 #container {
     height: 100vh;
     width: 100vw;
-    /*visibility: hidden;*/
+    visibility: hidden;
 }
 #content {
+}
+#pageLoadingContainer {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(240, 240, 240, 1);
 }
 #pageLoading {
     position: absolute;
@@ -12,21 +17,26 @@
     left: 0;
     right: 0;
     z-index: 99;
-    display: none;
+    /*display: none;*/
 }
 #weatherContainer {
     position: absolute;
-    top: 2%;
+    top: 4%;
     left: 0;
     right: 0;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
     height: 75%;
-    min-width: 375px;
-    min-height: 650px;
+    min-height: 550px;
     background: rgba(60, 60, 60, 0.3);
     color: white;
+}
+#nextforecastContainer {
+    min-width: 345px;
+    min-height: 150px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 .weatherInner {
     color: white;
@@ -48,7 +58,6 @@
 }
 .weatherInner div.fourth {
     display: inline-block;
-    margin: 0 0 0 40px;
     text-align: left;
 }
 .weatherInner div.xs {
@@ -71,7 +80,19 @@
 }
 .nextforecast {
     display: inline-block;
-    width: 20%;
+    width: 19%;
+    margin-top: 20px;
+}
+.nextforecast.today {
+    border: 1px solid rgba(90, 90, 90, 0.8);
+    background-color: rgba(60, 60, 60, 0.4);
+}
+.nextforecastHighTemp {
+    display: inline-block;
+    margin-right: 10px;
+}
+.nextforecastLowTemp {
+    display: inline-block;
 }
 #fairWeatherBackgroundImage {
     display: none;
@@ -88,6 +109,8 @@
 .WeatherBackgroundImage {
     width: 100%;
     height: 100%;
+    min-height: 600px;
+    min-width: 400px;
 }
 .WeatherBackground {
     position: absolute;
@@ -108,6 +131,8 @@
     right: 0;
     width: 100%;
     height: 100%;
+    min-height: 600px;
+    min-width: 400px;
     background: rgba(50, 50, 50, 0.5);
     -moz-transition: background .3s linear;
     -webkit-transition: background .3s linear;
@@ -115,11 +140,14 @@
     transition: background .3s linear;
 }
 @media(min-width: 0px){
+    #weatherContainer {
+        min-width: 350px;
+    }
     .weatherInner div.xs {
         font-size: 1.1em;
     }
     .weatherInner div.first {
-        font-size: 7em;
+        font-size: 9em;
     }
     .weatherInner div.second {
         font-size: 2.5em;
@@ -127,8 +155,16 @@
     .weatherInner div.third {
         font-size: 1.5em;
     }
+    .weatherInner div.fourth {
+        display: inline-block;
+        margin: 0 0 0 25px;
+        text-align: left;
+    }
 }
 @media(min-width: 550px){
+    #weatherContainer {
+        min-width: 450px;
+    }
     .weatherInner div.xs {
         font-size: 1.2em;
     }
@@ -141,10 +177,15 @@
     .weatherInner div.third {
         font-size: 2.25em;
     }
+    .weatherInner div.fourth {
+        display: inline-block;
+        margin: 0 0 0 40px;
+        text-align: left;
+    }
 }
 @media(min-width: 768px){
     .weatherInner div.xs {
-        font-size: 1.25em;
+        font-size: 1.3em;
     }
     .weatherInner div.first {
         font-size: 12em;

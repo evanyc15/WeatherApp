@@ -6,10 +6,13 @@
     <link rel="stylesheet" type="text/css" href="assets/css/vendor/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/vendor/bootstrap/bootstrap-theme.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/vendor/fontawesome/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/vendor/weatherfont/weather-icons.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/index.css">
 </head>
 <body>
-    <img id="pageLoading" src="assets/img/weather-loading-transparent.gif">
+    <div id="pageLoadingContainer">
+        <img id="pageLoading" src="assets/img/weather-loading-transparent.gif">
+    </div>
     <div id="container">
         <div class="WeatherBackground">
             <img id="fairWeatherBackgroundImage" class="WeatherBackgroundImage" src="assets/img/FairGreenField.jpg">
@@ -26,9 +29,10 @@
                             <div class="second">&deg;</div>
                             <div id="weatherTempUnits" class="third"></div>
                             <div id="weathersubInfo" class="fourth">
+                                <div id="weatherDate" class="xs"></div>
+                                <div id="weatherLocation" class="xs" style="margin-bottom: 10px;"></div>
                                 <div id="weatherHumidity" class="xs"></div>
                                 <div id="weatherWind" class="xs"></div>
-                                <div id="weatherLocation" class="xs"></div>
                                 <div id="weatherCond" class="xs"></div>
                             </div>
                         </div>
@@ -36,21 +40,46 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="weatherInner">
-                            <div class="nextforecast">
-
+                        <div id="nextforecastContainer" class="weatherInner">
+                            <div id="nextforecast1" class="nextforecast">
+                                <div class="nextforecastDay sm">Wed</div>
+                                <div class="nextforecastCond lg">
+                                    <i class="wi"></i>
+                                </div>
+                                <div class="nextforecastHighTemp sm ">86</div>
+                                <div class="nextforecastLowTemp sm">54</div>
                             </div>
-                            <div class="nextforecast">
-
+                            <div id="nextforecast2" class="nextforecast">
+                                <div class="nextforecastDay sm"></div>
+                                <div class="nextforecastCond lg">
+                                    <i class="wi"></i>
+                                </div>
+                                <div class="nextforecastHighTemp sm "></div>
+                                <div class="nextforecastLowTemp sm"></div>
                             </div>
-                            <div class="nextforecast">
-
+                            <div id="nextforecast3" class="nextforecast">
+                                <div class="nextforecastDay sm"></div>
+                                <div class="nextforecastCond lg">
+                                    <i class="wi"></i>
+                                </div>
+                                <div class="nextforecastHighTemp sm "></div>
+                                <div class="nextforecastLowTemp sm"></div>
                             </div>
-                            <div class="nextforecast">
-
+                            <div id="nextforecast4" class="nextforecast">
+                                <div class="nextforecastDay sm"></div>
+                                <div class="nextforecastCond lg">
+                                    <i class="wi"></i>
+                                </div>
+                                <div class="nextforecastHighTemp sm "></div>
+                                <div class="nextforecastLowTemp sm"></div>
                             </div>
-                            <div class="nextforecast">
-
+                            <div id="nextforecast5" class="nextforecast">
+                                <div class="nextforecastDay sm"></div>
+                                <div class="nextforecastCond lg">
+                                    <i class="wi"></i>
+                                </div>
+                                <div class="nextforecastHighTemp sm "></div>
+                                <div class="nextforecastLowTemp sm"></div>
                             </div>
                         </div>
                     </div>
