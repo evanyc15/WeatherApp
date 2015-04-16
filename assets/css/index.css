@@ -26,7 +26,6 @@
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
     height: 75%;
     min-height: 550px;
     background: rgba(60, 60, 60, 0.3);
@@ -142,6 +141,7 @@
 @media(min-width: 0px){
     #weatherContainer {
         min-width: 350px;
+        width: 85%;
     }
     .weatherInner div.xs {
         font-size: 1.1em;
@@ -164,6 +164,7 @@
 @media(min-width: 550px){
     #weatherContainer {
         min-width: 450px;
+        width: 75%
     }
     .weatherInner div.xs {
         font-size: 1.2em;
