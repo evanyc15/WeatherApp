@@ -32,7 +32,7 @@
     min-height: 550px;
     background: rgba(60, 60, 60, 0.3);
     color: white;
-    z-index: 91;
+    z-index: 99;
 }
 #nextforecastContainer {
     min-width: 345px;
@@ -157,7 +157,7 @@
     left: 10px;
     bottom: 55px;
     background: rgba(50, 50, 50, 0.5);
-    z-index: 94;
+    z-index: 99;
     display: none;
 }
 #refreshWeather:hover {
@@ -174,7 +174,7 @@
     height: 100px;
     padding: 10px;
     background: rgba(40, 40, 40, 0.6);
-    z-index: 94;
+    z-index: 99;
     display: none;
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
@@ -192,7 +192,7 @@
     left: 10px;
     bottom: 5px;
     padding: 5px;
-    z-index: 94;
+    z-index: 99;
     background: rgba(50, 50, 50, 0.5);
     cursor: pointer;
     /*display: none;*/
