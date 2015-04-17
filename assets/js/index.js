@@ -26,7 +26,6 @@ var getData = function(errorCallback){
                 var date = new Date(data.item.condition.date);
                 var code = parseInt(condition.code);
 
-                $(".WeatherBackgroundImage").hide();
                 $(".nextforecast").removeClass("today");
 
                 // Populate Today's forecast information
@@ -73,6 +72,8 @@ var getData = function(errorCallback){
                 setTimeout(function(){
                     $("#pageLoadingContainer").hide()
                     $('#container').css('visibility', 'visible');
+                    $("#weatherContainer").hide();
+                    $(".WeatherBackgroundImage").hide();
                     // Checks the forecast weather condition and sets appropriate background image
                     if(condition.text.toLowerCase() === "fair" || code === 33 || code === 34 || code === 31){
                         $("#fairWeatherBackgroundImage").fadeIn(1000);
