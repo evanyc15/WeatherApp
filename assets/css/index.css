@@ -1,14 +1,24 @@
+
 #container {
     height: 100vh;
     width: 100vw;
-    visibility: hidden;
+    /*visibility: hidden;*/
 }
 #content {
+    height: 100%;
+    width: 100%;
 }
 #pageLoadingContainer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
     height: 100vh;
     width: 100vw;
     background-color: rgba(240, 240, 240, 1);
+    z-index: 99;
+    display: none;
 }
 #pageLoading {
     position: absolute;
@@ -17,7 +27,6 @@
     left: 0;
     right: 0;
     z-index: 99;
-    /*display: none;*/
 }
 #weatherContainer {
     position: absolute;
@@ -30,6 +39,7 @@
     min-height: 550px;
     background: rgba(60, 60, 60, 0.3);
     color: white;
+    z-index: 91;
 }
 #nextforecastContainer {
     min-width: 345px;
@@ -50,6 +60,7 @@
     top: 40px;
     margin-left: -5px;
     display: inline;
+    z-index: 92;
 }
 .weatherInner div.third {
     display: inline-block;
@@ -105,6 +116,12 @@
 #rainyWeatherBackgroundImage {
     display: none;
 }
+#snowyWeatherBackgroundImage {
+    display: none;
+}
+#thunderstormWeatherBackgroundImage {
+    display: none;
+}
 .WeatherBackgroundImage {
     width: 100%;
     height: 100%;
@@ -117,8 +134,12 @@
     left: 0;
     right: 0;
     bottom: 0;
-    width: 100%;
+    margin: 0;
+    padding: 0;
+    width: 110%;
     height: 100%;
+    z-index: 90;
+    margin-left: -12px;
 }
 .WeatherBackground:before {
     content: "";
@@ -137,14 +158,60 @@
     -webkit-transition: background .3s linear;
     -o-transition: background .3s linear;
     transition: background .3s linear;
+    z-index: 90;
+}
+#quickPanelContainer {
+    position: fixed;
+    left: 49px;
+    bottom: 5px;
+    height: 100px;
+    padding: 10px;
+    background: rgba(40, 40, 40, 0.6);
+    z-index: 94;
+    display: none;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+#quickPanelContainer.open {
+    display: block;
+}
+#quickPanelContainer .input-group {
+    margin-bottom: 10px;
+}
+#quickPanelButton {
+    position: fixed;
+    left: 0;
+    bottom: 5px;
+    padding: 5px;
+    z-index: 94;
+    background: rgba(50, 50, 50, 0.5);
+    cursor: pointer;
+}
+#quickPanelButton:hover {
+    background: rgba(35, 35, 35, 0.6);
+}
+#quickPanelButton i {
+    font-size: 2.5em;
+    color: white;
 }
 @media(min-width: 0px){
     #weatherContainer {
         min-width: 350px;
-        width: 90%;
+        width: 95%;
+    }
+    #quickPanelContainer {
+        width: 240px;
     }
     .weatherInner div.xs {
         font-size: 1.1em;
+    }
+    .weatherInner div.sm {
+        font-size: 1.15em;
+    }
+    .weatherInner div.lg {
+        font-size: 2.5em;
     }
     .weatherInner div.first {
         font-size: 9em;
@@ -164,10 +231,19 @@
 @media(min-width: 550px){
     #weatherContainer {
         min-width: 450px;
-        width: 75%
+        width: 85%
+    }
+    #quickPanelContainer {
+        width: 350px;
     }
     .weatherInner div.xs {
         font-size: 1.2em;
+    }
+    .weatherInner div.sm {
+        font-size: 1.35em;
+    }
+    .weatherInner div.lg {
+        font-size: 3em;
     }
     .weatherInner div.first {
         font-size: 9em;
@@ -185,8 +261,18 @@
     }
 }
 @media(min-width: 768px){
+    #weatherContainer {
+        min-width: 450px;
+        width: 75%
+    }
     .weatherInner div.xs {
         font-size: 1.3em;
+    }
+    .weatherInner div.sm {
+         font-size: 1.425em;
+     }
+    .weatherInner div.lg {
+        font-size: 3.75em;
     }
     .weatherInner div.first {
         font-size: 12em;
@@ -201,6 +287,12 @@
 @media(min-width: 1000px){
     .weatherInner div.xs {
         font-size: 1.3em;
+    }
+    .weatherInner div.sm {
+        font-size: 1.5em;
+    }
+    .weatherInner div.lg {
+        font-size: 4.5em;
     }
     .weatherInner div.first {
         font-size: 15em;

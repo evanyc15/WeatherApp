@@ -5,20 +5,45 @@
     <title></title>
     <link rel="stylesheet" type="text/css" href="assets/css/vendor/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/vendor/bootstrap/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/vendor/bootstrap/bootstrap-flat.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/vendor/bootstrap/bootstrap-flat-extras.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/vendor/fontawesome/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/vendor/weatherfont/weather-icons.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/ribbon.css">
 </head>
 <body>
     <div id="pageLoadingContainer">
         <img id="pageLoading" src="assets/img/weather-loading-transparent.gif">
     </div>
+    <a href="https://www.yahoo.com/?ilc=401" target="_blank" class="corner-ribbon bottom-right sticky white shadow">
+        <img src="assets/img/YahooPurpleLogo.png">
+    </a>
+    <div id="quickPanelContainer">
+        <div class="input-group">
+            <input id="dateInput" class="form-control" type="date" placeholder="Enter a Date">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button"><i class="fa fa-calendar"></i></button>
+              </span>
+        </div>
+        <div class="input-group">
+            <input id="zipcodeInput" class="form-control" type="text" placeholder="Enter zip code">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button"><i class="fa fa-list-ol"></i></button>
+              </span>
+        </div>
+    </div>
+    <a id="quickPanelButton">
+        <i class="fa fa-gears"></i>
+    </a>
     <div id="container">
         <div class="WeatherBackground">
             <img id="fairWeatherBackgroundImage" class="WeatherBackgroundImage" src="assets/img/FairGreenField.jpg">
             <img id="sunnyWeatherBackgroundImage" class="WeatherBackgroundImage" src="assets/img/SunnyGreenField.jpg">
             <img id="cloudyWeatherBackgroundImage" class="WeatherBackgroundImage" src="assets/img/CloudyGreenField.jpg">
             <img id="rainyWeatherBackgroundImage" class="WeatherBackgroundImage" src="assets/img/RainyGreenField.jpg">
+            <img id="snowyWeatherBackgroundImage" class="WeatherBackgroundImage" src="assets/img/SnowyGreenField.jpg">
+            <img id="thunderstormWeatherBackgroundImage" class="WeatherBackgroundImage" src="assets/img/ThunderstormGreenField.jpg">
         </div>
         <div id="content">
             <div id="weatherContainer">
@@ -42,12 +67,12 @@
                     <div class="col-lg-12">
                         <div id="nextforecastContainer" class="weatherInner">
                             <div id="nextforecast1" class="nextforecast">
-                                <div class="nextforecastDay sm">Wed</div>
+                                <div class="nextforecastDay sm"></div>
                                 <div class="nextforecastCond lg">
                                     <i class="wi"></i>
                                 </div>
-                                <div class="nextforecastHighTemp sm ">86</div>
-                                <div class="nextforecastLowTemp sm">54</div>
+                                <div class="nextforecastHighTemp sm "></div>
+                                <div class="nextforecastLowTemp sm"></div>
                             </div>
                             <div id="nextforecast2" class="nextforecast">
                                 <div class="nextforecastDay sm"></div>
