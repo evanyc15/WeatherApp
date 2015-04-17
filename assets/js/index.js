@@ -27,6 +27,7 @@ var getData = function(errorCallback){
                 var code = parseInt(condition.code);
 
                 $(".WeatherBackgroundImage").hide();
+                $(".nextforecast").removeClass("today");
 
                 // Checks the forecast weather condition and sets appropriate background image
                 if(condition.text.toLowerCase() === "fair" || code === 33 || code === 34 || code === 31){
@@ -129,7 +130,6 @@ $(document).ready(function(){
         }
     };
     $("#refreshWeather a").on("click", function(){
-        $(".nextforecast").removeClass("today");
         $("#refreshWeather a i").addClass("fa-spin");
         getData();
     });
