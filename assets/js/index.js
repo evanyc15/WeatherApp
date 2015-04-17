@@ -77,8 +77,10 @@ $(document).ready(function(){
             }
             // Show page now
             setTimeout(function(){
-                //$("#pageLoadingContainer").hide();
-                //$("#container").css("visibility","visible");
+                $("#pageLoadingContainer").hide();
+                $("#container").css("visibility","visible");
+                $(".corner-ribbon").show();
+                $("#quickPanelButton").show();
             }, 3100);
         }
     });
