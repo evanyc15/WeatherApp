@@ -231,7 +231,7 @@
 @media(min-width: 550px){
     #weatherContainer {
         min-width: 450px;
-        width: 85%
+        width: 90%
     }
     #quickPanelContainer {
         width: 350px;
@@ -263,7 +263,7 @@
 @media(min-width: 768px){
     #weatherContainer {
         min-width: 450px;
-        width: 75%
+        width: 85%
     }
     .weatherInner div.xs {
         font-size: 1.3em;
@@ -285,6 +285,10 @@
     }
 }
 @media(min-width: 1000px){
+    #weatherContainer {
+        min-width: 450px;
+        width: 80%
+    }
     .weatherInner div.xs {
         font-size: 1.3em;
     }
