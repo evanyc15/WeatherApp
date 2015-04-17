@@ -1,11 +1,11 @@
-$(document).ready(function(){
-    // Parameters to send to Yahoo Forecast Api
-    var weatherParams = {
-        q: "select * from weather.forecast where woeid = ",
-        zipcode: "2389646",
-        format: 'json'
-    };
+// Parameters to send to Yahoo Forecast Api
+var weatherParams = {
+    q: "select * from weather.forecast where woeid = ",
+    zipcode: "2389646",
+    format: 'json'
+};
 
+var getData = function(){
     // Ajax call to get Yahoo Forecast information
     $.ajax({
         url: 'https://query.yahooapis.com/v1/public/yql',
@@ -41,8 +41,6 @@ $(document).ready(function(){
             $("#weatherWind").text("Wind: "+data.wind.speed+" "+data.units.speed);
             $("#weatherLocation").text(data.location.city+", "+data.location.region)
             $("#weatherCond").text(data.item.condition.text);
-
-            console.log(data);
 
             // Populate the forecast for the week
             var forecast = data.item.forecast;
@@ -81,9 +79,16 @@ $(document).ready(function(){
                 $("#container").css("visibility","visible");
                 $(".corner-ribbon").show();
                 $("#quickPanelButton").show();
+                $("#refreshWeather").show();
+                $("#refreshWeather a i").removeClass("fa-spin");
             }, 3100);
         }
     });
+};
+
+$(document).ready(function(){
+    getData();
+
     $(document).mouseup(function (e) {
         var container = $("#quickPanelContainer");
 
@@ -99,5 +104,11 @@ $(document).ready(function(){
         } else if ((!container.is(e.target) && container.has(e.target).length === 0)) {
             container.removeClass("open");
         }
+    });
+
+    $("#refreshWeather a").on("click", function(){
+        $(".nextforecast").removeClass("today");
+        $("#refreshWeather a i").addClass("fa-spin");
+        getData();
     });
 });
