@@ -37,6 +37,7 @@
     background: rgba(60, 60, 60, 0.3);
     color: white;
     z-index: 99;
+    display: none;
 }
 #nextforecastContainer {
     min-width: 345px;

@@ -29,21 +29,6 @@ var getData = function(errorCallback){
                 $(".WeatherBackgroundImage").hide();
                 $(".nextforecast").removeClass("today");
 
-                // Checks the forecast weather condition and sets appropriate background image
-                if(condition.text.toLowerCase() === "fair" || code === 33 || code === 34 || code === 31){
-                    $("#fairWeatherBackgroundImage").show();
-                } else if(condition.text.toLowerCase() === "sunny" || code === 36 || code === 32){
-                    $("#sunnyWeatherBackgroundImage").show();
-                } else if(condition.text.toLowerCase() === "cloudy" || (code >= 26 && code <= 30) || code === 44){
-                    $("#cloudyWeatherBackgroundImage").show();
-                } else if(condition.text.toLowerCase() === "rainy" || (code >= 8 && code <= 12) || code === 40){
-                    $("#rainyWeatherBackgroundImage").show();
-                } else if(condition.text.toLowerCase() === "snowy" || (code >= 13 && code <= 16) || (code >= 41 && code <= 43) || code === 46){
-                    $("#snowyWeatherBackgroundImage").show();
-                } else if(condition.text.toLowerCase() === "thunderstorm" || code === 3 || code === 4 || (code >= 37 && condition.code <= 39) || condition.code === 45 || condition.code === 47){
-                    $("#thunderstormWeatherBackgroundImage").show();
-                }
-
                 // Populate Today's forecast information
                 $("#weatherDate").text(date.toString().substring(0,15));
                 $("#weatherTemp").text(data.item.condition.temp);
@@ -86,13 +71,32 @@ var getData = function(errorCallback){
                 }
                 // Show page now
                 setTimeout(function(){
-                    $("#pageLoadingContainer").hide();
-                    $("#container").css("visibility","visible");
-                    $(".corner-ribbon").show();
-                    $("#quickPanelButton").show();
-                    $("#refreshWeather").show();
+                    $("#pageLoadingContainer").hide()
+                    $('#container').css('visibility', 'visible');
+                    // Checks the forecast weather condition and sets appropriate background image
+                    if(condition.text.toLowerCase() === "fair" || code === 33 || code === 34 || code === 31){
+                        $("#fairWeatherBackgroundImage").fadeIn(1000);
+                    } else if(condition.text.toLowerCase() === "sunny" || code === 36 || code === 32){
+                        $("#sunnyWeatherBackgroundImage").fadeIn(1000);
+                    } else if(condition.text.toLowerCase() === "cloudy" || (code >= 26 && code <= 30) || code === 44){
+                        $("#cloudyWeatherBackgroundImage").fadeIn(1000);
+                    } else if(condition.text.toLowerCase() === "rainy" || (code >= 8 && code <= 12) || code === 40){
+                        $("#rainyWeatherBackgroundImage").fadeIn(1000);
+                    } else if(condition.text.toLowerCase() === "snowy" || (code >= 13 && code <= 16) || (code >= 41 && code <= 43) || code === 46){
+                        $("#snowyWeatherBackgroundImage").fadeIn(1000);
+                    } else if(condition.text.toLowerCase() === "thunderstorm" || code === 3 || code === 4 || (code >= 37 && condition.code <= 39) || condition.code === 45 || condition.code === 47){
+                        $("#thunderstormWeatherBackgroundImage").fadeIn(1000);
+                    }
+                }, 3000);
+                setTimeout(function(){
+                    $(".corner-ribbon").show(1200);
+                }, 3500);
+                setTimeout(function(){
+                    $("#weatherContainer").show("bounce", { distance: 8, times: 3}, 1200);
+                    $("#quickPanelButton").fadeIn(1200);
+                    $("#refreshWeather").fadeIn(1200);
                     $("#refreshWeather a i").removeClass("fa-spin");
-                }, 3100);
+                }, 4500);
             }
         },
     });
