@@ -18,6 +18,8 @@ var getData = function(){
             var date = new Date(data.item.condition.date);
             var code = parseInt(condition.code);
 
+            $(".WeatherBackgroundImage").hide();
+
             // Checks the forecast weather condition and sets appropriate background image
             if(condition.text.toLowerCase() === "fair" || code === 33 || code === 34 || code === 31){
                 $("#fairWeatherBackgroundImage").show();
