@@ -136,10 +136,10 @@
     bottom: 0;
     margin: 0;
     padding: 0;
-    width: 110%;
+    width: 125%;
     height: 100%;
     z-index: 90;
-    margin-left: -12px;
+    margin-left: -40px;
 }
 .WeatherBackground:before {
     content: "";
