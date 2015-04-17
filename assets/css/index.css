@@ -157,7 +157,7 @@
     left: 10px;
     bottom: 55px;
     background: rgba(50, 50, 50, 0.5);
-    z-index: 99;
+    z-index: 100;
     display: none;
 }
 #refreshWeather:hover {
@@ -174,7 +174,7 @@
     height: 100px;
     padding: 10px;
     background: rgba(40, 40, 40, 0.6);
-    z-index: 99;
+    z-index: 100;
     display: none;
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
@@ -192,10 +192,10 @@
     left: 10px;
     bottom: 5px;
     padding: 5px;
-    z-index: 99;
+    z-index: 100;
     background: rgba(50, 50, 50, 0.5);
     cursor: pointer;
-    /*display: none;*/
+    display: none;
 }
 #quickPanelButton:hover {
     background: rgba(35, 35, 35, 0.6);
