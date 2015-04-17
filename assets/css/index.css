@@ -1,6 +1,10 @@
 #container {
     visibility: hidden;
 }
+.error {
+    border: 1px solid #ff282f;
+    color: red;
+}
 #pageLoadingContainer {
     position: absolute;
     left: 0;
