@@ -71,6 +71,7 @@ var getData = function(errorCallback){
                 }
                 // Show page now
                 setTimeout(function(){
+
                     $("#pageLoadingContainer").hide()
                     $('#container').css('visibility', 'visible');
                     $(".WeatherBackgroundImage").hide();
