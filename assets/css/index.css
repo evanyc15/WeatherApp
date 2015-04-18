@@ -288,7 +288,7 @@
     #todayWeatherBase {
         width: 360px;
         height: 150px;
-        top: 40px;
+        top: 30px;
     }
     #forecastBase {
         display: none;
@@ -306,7 +306,7 @@
         font-size: 2.5em;
     }
     .weatherInner div.first {
-        font-size: 9em;
+        font-size: 7.5em;
     }
     .weatherInner div.second {
         font-size: 2.5em;
@@ -330,23 +330,23 @@
     }
     #todayWeatherBase {
         width: 430px;
-        height: 175px;
-        top: 45px;
+        height: 160px;
+        top: 30px;
     }
     #quickPanelContainer {
         width: 350px;
     }
     .weatherInner div.xs {
-        font-size: 1.2em;
+        font-size: 1.15em;
     }
     .weatherInner div.sm {
-        font-size: 1.35em;
+        font-size: 1.25em;
     }
     .weatherInner div.lg {
-        font-size: 3em;
+        font-size: 2.75em;
     }
     .weatherInner div.first {
-        font-size: 9em;
+        font-size: 8.5em;
     }
     .weatherInner div.second {
         font-size: 3em;
