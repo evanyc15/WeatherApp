@@ -88,17 +88,17 @@ var getData = function(errorCallback){
                     } else if(condition.text.toLowerCase() === "thunderstorm" || code === 3 || code === 4 || (code >= 37 && condition.code <= 39) || condition.code === 45 || condition.code === 47){
                         $("#thunderstormWeatherBackgroundImage").fadeIn(1000);
                     }
-                }, 3000);
+                }, 1000);
                 setTimeout(function(){
                     $(".corner-ribbon").show(1200);
-                }, 3500);
+                }, 1500);
                 setTimeout(function(){
                     $("#todayWeatherBase").show("bounce", { distance: 8, times: 3}, 1200);
                     $("#weatherContainer").show("bounce", { distance: 8, times: 3}, 1200);
                     $("#quickPanelButton").fadeIn(1200);
                     $("#refreshWeather").fadeIn(1200);
                     $("#refreshWeather a i").removeClass("fa-spin");
-                }, 4500);
+                }, 2500);
             }
         },
     });
