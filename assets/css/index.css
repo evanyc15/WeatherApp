@@ -40,24 +40,11 @@
     height: 75%;
     min-height: 550px;
     color: white;
+    padding: 0;
     z-index: 99;
     display: none;
 }
 #todayWeatherContainer {
-    /*background: rgba(60, 60, 60, 0.3);*/
-}
-#nextforecastContainer {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    right: 0;
-    min-width: 350px;
-    min-height: 150px;
-    padding: 0px 15px;
-    z-index: 94;
-}
-#todayWeatherBase {
-    position: absolute;
     left: 0;
     right: 0;
     margin-left: auto;
@@ -76,7 +63,16 @@
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
-    display: none;
+}
+#nextforecastContainer {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    min-width: 350px;
+    min-height: 150px;
+    padding: 0px 15px;
+    z-index: 94;
 }
 #forecastBase {
     position: absolute;
@@ -104,21 +100,24 @@
 .weatherInner div.first {
     display: inline-block;
     margin: 0 0 0 30px;
+    z-index: 94;
 }
 .weatherInner div.second {
     position: absolute;
     top: 40px;
     margin-left: -5px;
     display: inline;
-    z-index: 92;
+    z-index: 94;
 }
 .weatherInner div.third {
     display: inline-block;
     margin: 0 0 0 5px;
+    z-index: 94
 }
 .weatherInner div.fourth {
     display: inline-block;
     text-align: left;
+    z-index: 94;
 }
 .weatherInner div.xs {
     font-size: 1.3em;
@@ -285,10 +284,9 @@
         min-width: 350px;
         width: 95%;
     }
-    #todayWeatherBase {
-        width: 360px;
+    #todayWeatherContainer {
         height: 150px;
-        top: 25px;
+        width: 350px;
     }
     #forecastBase {
         display: none;
@@ -328,10 +326,9 @@
         min-width: 450px;
         width: 90%
     }
-    #todayWeatherBase {
-        width: 430px;
-        height: 160px;
-        top: 30px;
+    #todayWeatherContainer {
+        height: 175px;
+        width: 450px;
     }
     #quickPanelContainer {
         width: 350px;
@@ -368,10 +365,9 @@
         min-width: 450px;
         width: 85%
     }
-    #todayWeatherBase {
-        width: 560px;
-        height: 200px;
-        top: 50px;
+    #todayWeatherContainer {
+        height: 260px;
+        width: 530px;
     }
     #forecastBase {
         top: 75px;
@@ -404,10 +400,9 @@
         min-width: 450px;
         width: 80%
     }
-    #todayWeatherBase {
-        width: 560px;
-        height: 250px;
-        top: 65px;
+    #todayWeatherContainer {
+        height: 275px;
+        width: 550px;
     }
     .weatherInner div.xs {
         font-size: 1.3em;
