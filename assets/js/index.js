@@ -71,7 +71,6 @@ var getData = function(errorCallback){
                 }
                 // Show page now
                 setTimeout(function(){
-
                     $("#pageLoadingContainer").hide()
                     $('#container').css('visibility', 'visible');
                     $(".WeatherBackgroundImage").hide();
@@ -94,6 +93,7 @@ var getData = function(errorCallback){
                     $(".corner-ribbon").show(1200);
                 }, 3500);
                 setTimeout(function(){
+                    $("#todayWeatherBase").show("bounce", { distance: 8, times: 3}, 1200);
                     $("#weatherContainer").show("bounce", { distance: 8, times: 3}, 1200);
                     $("#quickPanelButton").fadeIn(1200);
                     $("#refreshWeather").fadeIn(1200);
