@@ -27,6 +27,7 @@ var getData = function(errorCallback){
                 var code = parseInt(condition.code);
 
                 $(".nextforecast").removeClass("today");
+                $("#todayWeatherBase").hide();
                 $("#weatherContainer").hide();
 
                 // Populate Today's forecast information
